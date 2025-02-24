@@ -39,7 +39,7 @@ if "question_count" not in st.session_state:
 
 # Limite de perguntas
 if "question_limit" not in st.session_state:
-    st.session_state["question_limit"] = 1
+    st.session_state["question_limit"] = 3
 
 # Variável de autenticação
 if "authenticated" not in st.session_state:
@@ -89,11 +89,11 @@ if (
     not st.session_state["authenticated"]
     and st.session_state["question_count"] >= st.session_state["question_limit"]
 ):
-    st.warning("Você atingiu o limite de perguntas. Digite a senha para continuar.")
+    st.warning("Você atingiu o limite de perguntas. Solicite a senha para continuar.")
     st.info(
         "O projeto está em desenvolvimento. Para mais testes, entre em contato com:\n\n"
-        "**Rodolfo Batista**: rodolfo@batista.com | Tel: 65498798\n\n"
-        "**Mario Alencar**: mario@mario.com | Tel: 6549988"
+        "**Alisson Pereira**: alissonpereira.contato@gmail.com| Contato:75 98886-2585\n\n"
+        "**Tiago Fernando**: tiago.piveta@outlook.com | Contato: 11 99609-1466"
     )
     password = st.text_input("Senha:", type="password")
     if password:
