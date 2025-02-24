@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Imagens</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+    }
+    
+    .gallery-container {
+      position: relative;
+      width: 900px;
+      max-width: 100%;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .gallery {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    
+    .gallery-item {
+      min-width: 100%;
+      height: 900px;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .gallery-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      transform: translateY(-50%);
+    }
+    
+    .nav-button {
+      background-color: rgba(255, 255, 255, 0.7);
+      color: #333;
+      width: 50px;
+      height: 50px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s;
+    }
+    
+    .nav-button:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .gallery-dots {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .dot.active {
+      background-color: white;
+    }
+    
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery-container">
+    <div class="gallery" id="gallery">
+      <div class="gallery-item">
+        <img src="00.jpg" alt="Imagem 1">
+        <div class="caption">Imagem 1</div>
+      </div>
+      <div class="gallery-item">
+        <img src="001.jpg" alt="Imagem 2">
+        <div class="caption">Imagem 2</div>
+      </div>
+      <div class="gallery-item">
+        <img src="002.jpg" alt="Imagem 3">
+        <div class="caption">Imagem 3</div>
+      </div>
+      <div class="gallery-item">
+        <img src="003.jpg" alt="Imagem 4">
+        <div class="caption">Imagem 4</div>
+      </div>
+      <div class="gallery-item">
+        <img src="004.jpg" alt="Imagem 4">
+        <div class="caption">Imagem 5</div>
+      </div>
+     
+    </div>
+    
+    <div class="gallery-nav">
+      <button class="nav-button" id="prevBtn">&#10094;</button>
+      <button class="nav-button" id="nextBtn">&#10095;</button>
+    </div>
+    
+    <div class="gallery-dots" id="dots"></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const gallery = document.getElementById('gallery');
+      const items = document.querySelectorAll('.gallery-item');
+      const dotsContainer = document.getElementById('dots');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      
+      let currentIndex = 0;
+      const totalItems = items.length;
+      
+      // Criar indicadores de pontos
+      items.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+      
+      const dots = document.querySelectorAll('.dot');
+      
+      // Função para ir para um slide específico
+      function goToSlide(index) {
+        if (index < 0) index = totalItems - 1;
+        if (index >= totalItems) index = 0;
+        
+        gallery.style.transform = `translateX(-${index * 100}%)`;
+        currentIndex = index;
+        
+        // Atualizar pontos ativos
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentIndex);
+        });
+      }
+      
+      // Manipuladores de eventos para botões de navegação
+      prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+      nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+      
+      // Opcional: adicionar navegação do teclado
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') goToSlide(currentIndex - 1);
+        if (e.key === 'ArrowRight') goToSlide(currentIndex + 1);
+      });
+      
+      // Opcional: adicionar deslizar para dispositivos móveis
+      let touchStartX = 0;
+      let touchEndX = 0;
+      
+      gallery.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+      });
+      
+      gallery.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      });
+      
+      function handleSwipe() {
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold) {
+          goToSlide(currentIndex + 1); // Deslize para a esquerda (próxima imagem)
+        }
+        if (touchEndX > touchStartX + swipeThreshold) {
+          goToSlide(currentIndex - 1); // Deslize para a direita (imagem anterior)
+        }
+      }
+      
+      // Opcional: rotação automática de slides
+      // setInterval(() => goToSlide(currentIndex + 1), 5000);
+    });
+  </script>
+</body>
+</html>
