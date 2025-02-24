@@ -1,10 +1,11 @@
 
- - [Home](#Home) | [Objetivo](#Objetivo) | [Funcionalidades](#Funcionalidades) | [Tecnologias](#Tecnologias) | [Desenvolvedores](#Desenvolvedores) | [Status](#Status) | [Contribuição](#Contribuição)
+[Home](#Home) | [Objetivo](#Objetivo) | [Funcionalidades](#Funcionalidades) | [Tecnologias](#Tecnologias) | [Desenvolvedores](#Desenvolvedores) | [Status](#Status) | [Contribuição](#Contribuição)
 
 <a id="Home"></a>
 # SophIA - Assistente Virtual para Professores
 
 SophIA é um assistente virtual baseado em Inteligência Artificial projetado para apoiar professores na análise de desempenho estudantil. A ferramenta permite consultas interativas sobre notas, frequência e métricas pedagógicas, gerando insights visuais e relatórios para facilitar a personalização do ensino.
+Para visitar o assistente acesse o link : https://imsophia.streamlit.app/
 
 <a id="Objetivo"></a>
 ## Objetivo
