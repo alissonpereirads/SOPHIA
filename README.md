@@ -43,18 +43,21 @@ Facilitar a análise do desempenho dos alunos, fornecendo informações rápidas
 <a id="Desenvolvedores"></a>
 # Desenvolvedores
 
-- **[Alisson Pereira]**  - - https://www.linkedin.com/in/alisson-pereira-ds/
-```
-Data Scientist | Python - SQL - LLM - Gen AI | Machine Learning
+ˋˋˋ
+**[Alisson Pereira]**  - - https://www.linkedin.com/in/alisson-pereira-ds/<br>
+Data Scientist | Python - SQL - LLM - Gen AI | Machine Learning<br>
 E-mail : alissonpereira.contato@gmail.com
-```
-- **[Tiago Fernando]** - https://www.linkedin.com/in/tiagofernandotagfer/
-```
-Estudante de Ciência de Dados | Análise de Dados | Machine Learning | SQL | Python
+
+ˋˋˋ
+
+ˋˋˋ
+**[Tiago Fernando]** - https://www.linkedin.com/in/tiagofernandotagfer/<br>
+Estudante de Ciência de Dados | Análise de Dados | Machine Learning | SQL | Python <br>
 E-mail : tiago.piveta@outlook.com
 
 Responsável pelo desenvolvimento integral do banco de dados iniciou elaborando o Modelo Entidade-Relacionamento (MER) e o Diagrama Entidade-Relacionamento (DER), que serviram como base para mapear com precisão os requisitos e as relações entre os dados. Em seguida, implementou a criação das tabelas e estabeleceu os relacionamentos, assegurando a integridade e a eficiência do armazenamento dos dados. Essa abordagem contribuiu para uma estrutura robusta e escalável, facilitando a manutenção e a evolução do sistema ao longo do projeto.
-```
+ˋˋˋ
+
 <a id="Status"></a>
 # Status do Projeto
 
