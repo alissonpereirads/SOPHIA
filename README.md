@@ -1,7 +1,10 @@
 
- - [Home](#Home) | [Objetivo](#Objetivo) | [Funcionalidades](#Funcionalidades) | [Tecnologias](#Tecnologias) | [Desenvolvedores](#Desenvolvedores) | [Status](#Status) | [Contribuição](#Contribuição)
+ [<span style="color: #db67f5;">Home</span>](#Home) | [<span style="color: #db67f5;">Objetivo</span>](#Objetivo) | [<span style="color: #db67f5;">Funcionalidades</span>](#Funcionalidades) | [<span style="color: #db67f5;">Prints</span>](#Prints) | [<span style="color: #db67f5;">Tecnologias</span>](#Tecnologias) | [<span style="color: #db67f5;">Desenvolvedores</span>](#Desenvolvedores) | [<span style="color: #db67f5;">Status</span>](#Status) | [<span style="color: #db67f5;">Contribuição</span>](#Contribuição)
 
-<a id="Home"></a>
+ ![Capa](https://raw.githubusercontent.com/alissonpereirads/SOPHIA/refs/heads/main/sophia_capa)
+
+<a href="Home"></a>
+
 # SophIA - Assistente Virtual para Professores
 
 SophIA é um assistente virtual baseado em Inteligência Artificial projetado para apoiar professores na análise de desempenho estudantil. A ferramenta permite consultas interativas sobre notas, frequência e métricas pedagógicas, gerando insights visuais e relatórios para facilitar a personalização do ensino.
@@ -18,7 +21,8 @@ Facilitar a análise do desempenho dos alunos, fornecendo informações rápidas
 - **Relatórios Automatizados**: Sumários de desempenho por aluno, turma ou período letivo.
 - **Análise de Frequência**: Monitoramento da presença dos alunos.
 
-
+<a id="Prints"></a>
+## Prints
 
    <img src="00.jpg" alt="Image 0" style="width: 100%; display: block; min-width: 100%;">
    <img src="001.jpg" alt="Image 1" style="width: 100%; display: block; min-width: 100%;">
@@ -48,7 +52,7 @@ Facilitar a análise do desempenho dos alunos, fornecendo informações rápidas
 Data Scientist | Python - SQL - LLM - Gen AI | Machine Learning
 E-mail : alissonpereira.contato@gmail.com
 
-• Responsável pelo desenvolvimento e arquitetura da IA com LangChain e modelos da OpenAi, garantindo interações naturais e contextualizadas;
+• Idealizador e lider de projeto, responsável pelo desenvolvimento e arquitetura da IA com LangChain e modelos da OpenAi, garantindo interações naturais e contextualizadas;
 • Implementação de visualizações dinâmicas utilizando Plotly e Streamlit, permitindo gráficos interativos e análises intuitivas para professores;
 • Apresentação do MVP à Secretaria de Educação, demonstrando a aplicabilidade da ferramenta e suas possibilidades de impacto na gestão educacional.
 ```
