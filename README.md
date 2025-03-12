@@ -1,7 +1,7 @@
 
  [<span style="color: #db67f5;">Home</span>](#Home) | [<span style="color: #db67f5;">Objetivo</span>](#Objetivo) | [<span style="color: #db67f5;">Funcionalidades</span>](#Funcionalidades) | [<span style="color: #db67f5;">Prints</span>](#Prints) | [<span style="color: #db67f5;">Tecnologias</span>](#Tecnologias) | [<span style="color: #db67f5;">Desenvolvedores</span>](#Desenvolvedores) | [<span style="color: #db67f5;">Status</span>](#Status) | [<span style="color: #db67f5;">Contribuição</span>](#Contribuição)
 
- ![Capa](https://raw.githubusercontent.com/alissonpereirads/SOPHIA/refs/heads/main/sophia_capa)
+<img src="sophia_capa.jpg" alt="Image 0" style="width: 100%; display: block; min-width: 100%;">
 
 <a href="Home"></a>
 
