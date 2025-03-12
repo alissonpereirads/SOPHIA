@@ -20,6 +20,60 @@ if not ACCESS_PASSWORD:
 st.set_page_config(page_title="SophIA", page_icon="app/icons/icon.png")
 st.image("app/icons/logo_L.png", width=200)
 
+
+# Sidebar
+with st.sidebar:
+    st.image("app/icons/logo_L.png", width=200)
+    st.header("Sobre a SophIA")
+    st.info(
+        """
+        Sophia é uma assistente virtual
+        com foco em analise de dados escolares
+        desenvolvida para professores.
+
+        Transforma dados em isights claros e acionaveis
+        para melhor o ensino.
+        """
+    )
+    st.warning("Atenção: Banco de dados ficticio")
+    st.markdown(
+        """
+        ---
+        **Como usar:**
+        1.  Digite sua pergunta na caixa de chat.
+        2.  Aguarde a resposta da SophIA.
+        3.  Se a resposta incluir um gráfico, ele será exibido automaticamente.
+     
+        **Testes**:
+
+        4. Alunos: João, Maria, Beatriz, Carlos
+        5. Disciplinas : Matemática, Portguês,Ciências
+        """
+    )
+    st.markdown(
+        """
+        **Exemplo de perguntas:**
+        1. Qual nota de Maria em Matematica.
+        2. Quem é o melhor aluno de Ciencias.
+        3. Compare as notas de João e Carlos em Portugues.
+        4. Qual aluno que mais falta?
+        5. Gere media de  Beatriz em Historia
+        ---
+        """
+    )
+    st.markdown(
+        "**Contato**\n\n"
+        "Alisson Pereira : alissonpereira.contato@gmail.com\n"
+        "\n(75) 98886-2585\n\n"
+        "Tiago Fernando : tiago.piveta@outlook.com"
+        "\n\n(11) 99609-1466"
+    )
+
+
+# Main app content
+# st.title("Sua Assistente Inteligente")
+# st.info("Exemplo")
+
 # Carrega ícones
 icon1, icon2 = load_images("app/icons/icon.png", "app/icons/icon_user.jpg")
 
@@ -39,7 +93,7 @@ if "question_count" not in st.session_state:
 
 # Limite de perguntas
 if "question_limit" not in st.session_state:
-    st.session_state["question_limit"] = 3
+    st.session_state["question_limit"] = 4
 
 # Variável de autenticação
 if "authenticated" not in st.session_state:
